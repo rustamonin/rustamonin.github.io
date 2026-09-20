@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="德丝缇拉克官方商城 - 提供高品质家居布艺、窗帘定制及软装解决方案，致力于打造舒适、优雅的居住空间。">
+    <meta name="keywords" content="德丝缇拉克, 家居软装, 窗帘定制, 家居布艺, 德丝缇拉克窗帘">
+    <title>德丝缇拉克-高端家居软装与窗帘定制专家</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* 深褐色，体现天然与质感 */
+            --secondary-color: #D2B48C; /* 棕褐色，体现温馨 */
+            --bg-color: #FAFAF5; /* 米白色，护眼且高级 */
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --accent: #C0A080;
+            --spacing-unit: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: normal;
+            margin-left: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #6d360e;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/seed/desitila/1920/1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* 主题分类 */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .category-img {
+            height: 200px;
+            width: 100%;
+        }
+
+        .category-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .category-info h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .category-info p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* 产品展示 */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            height: 320px;
+            width: 100%;
+            position: relative;
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 2px;
+        }
+
+        .product-details {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-desc {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-price {
+            font-size: 18px;
+            color: var(--primary-color);
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price span {
+            font-size: 14px;
+            color: var(--text-light);
+            text-decoration: line-through;
+            font-weight: normal;
+        }
+
+        /* 关于我们/理念 */
+        .about-section {
+            background-color: #fff;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--bg-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* 底部 */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav {
+                order: 3;
+                width: 100%;
+                margin-top: 15px;
+                overflow-x: auto;
+            }
+
+            nav ul {
+                width: 100%;
+                justify-content: flex-start;
+                padding-bottom: 5px;
+            }
+
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部导航 -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                德丝缇拉克
+                <span>DESITILA</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#products">精选产品</a></li>
+                    <li><a href="#categories">分类浏览</a></li>
+                    <li><a href="#about">品牌故事</a></li>
+                    <li><a href="#service">定制服务</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">免费咨询</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero 首屏 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>用布艺编织生活的温度</h1>
+            <p>德丝缇拉克为您提供源自欧洲的优质家居布艺，定制专属您的舒适空间。</p>
+            <div style="display: flex; justify-content: center; gap: 15px;">
+                <button class="btn btn-primary" style="padding: 12px 30px; font-size: 16px;">浏览新品</button>
+                <button class="btn btn-outline" style="padding: 12px 30px; font-size: 16px; color: white; border-color: white;">了解定制</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分类展示 -->
+    <section id="categories" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>精选系列</h2>
+                <p>涵盖客厅、卧室、餐厅及办公空间，满足不同场景的软装需求</p>
+            </div>
+            <div class="category-grid">
+                <article class="category-card">
+                    <img src="https://picsum.photos/seed/curtain1/400/300" alt="高端窗帘系列" class="category-img">
+                    <div class="category-info">
+                        <h3>高端窗帘系列</h3>
+                        <p>遮光、隔热、隐私保护，打造静谧睡眠环境</p>
+                    </div>
+                </article>
+                <article class="category-card">
+                    <img src="https://picsum.photos/seed/sofa/400/300" alt="布艺沙发" class="category-img">
+                    <div class="category-info">
+                        <h3>布艺沙发</h3>
+                        <p>人体工学设计，触感柔软，经久耐用</p>
+                    </div>
+                </article>
+                <article class="category-card">
+                    <img src="https://picsum.photos/seed/cushion/400/300" alt="靠垫抱枕" class="category-img">
+                    <div class="category-info">
+                        <h3>靠垫抱枕</h3>
+                        <p>丰富色彩与图案，点亮家居生活细节</p>
+                    </div>
+                </article>
+                <article class="category-card">
+                    <img src="https://picsum.photos/seed/bedding/400/300" alt="床品四件套" class="category-img">
+                    <div class="category-info">
+                        <h3>床品四件套</h3>
+                        <p>亲肤材质，透气舒适，提升睡眠质量</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门推荐 -->
+    <section id="products" class="section" style="background-color: #fff;">
+        <div class="container">
+            <div class="section-header">
+                <h2>当季热销</h2>
+                <p>深受消费者喜爱的经典款式，品质之选</p>
+            </div>
+            <div class="product-grid">
+                <!-- 产品 1 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <span class="product-tag">新品</span>
+                        <img src="https://picsum.photos/seed/prod1/400/500" alt="意式极简窗帘" style="height: 100%; width: 100%;">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">意式极简提花窗帘</h3>
+                        <p class="product-desc">采用高密度棉麻面料，纹理细腻，遮光率85%。</p>
+                        <div class="product-price">
+                            <span>¥599.00</span>
+                            <span>¥899.00</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 产品 2 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <span class="product-tag">热销</span>
+                        <img src="https://picsum.photos/seed/prod2/400/500" alt="北欧风沙发套" style="height: 100%; width: 100%;">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">北欧风可拆洗沙发套</h3>
+                        <p class="product-desc">多色可选，防污易打理，保护沙发原色。</p>
+                        <div class="product-price">
+                            <span>¥299.00</span>
+                            <span>¥399.00</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 产品 3 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/seed/prod3/400/500" alt="法式刺绣抱枕" style="height: 100%; width: 100%;">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">法式宫廷刺绣抱枕</h3>
+                        <p class="product-desc">精致刺绣工艺，增添空间艺术气息。</p>
+                        <div class="product-price">
+                            <span>¥128.00</span>
+                            <span>¥168.00</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 产品 4 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <span class="product-tag">特价</span>
+                        <img src="https://picsum.photos/seed/prod4/400/500" alt="全遮光床品套" style="height: 100%; width: 100%;">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">全遮光高支棉床品</h3>
+                        <p class="product-desc">60支长绒棉，亲肤透气，睡眠更安心。</p>
+                        <div class="product-price">
+                            <span>¥688.00</span>
+                            <span>¥880.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <button class="btn btn-outline" style="padding: 10px 40px;">查看更多产品</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌故事 -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>关于德丝缇拉克</h2>
+                    <p>德丝缇拉克（DESITILA）致力于将欧洲经典家居美学引入现代生活。我们专注于高品质家居布艺的研发与生产，从面料的选择到成品的剪裁，每一个环节都严格把控，只为呈现最纯粹的舒适体验。</p>
+                    <p>我们的设计灵感源自自然与艺术，坚持使用环保、可降解的天然纤维，确保您和家人的健康。无论是温馨的客厅、静谧的卧室还是充满活力的餐厅，德丝缇拉克都能为您量身定制。</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">1</div>
+                            <div>
+                                <h4>精选面料</h4>
+                                <p style="font-size: 12px; margin:0;">100%天然纤维</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">2</div>
+                            <div>
+                                <h4>匠心工艺</h4>
+                                <p style="font-size: 12px; margin:0;">手工精细制作</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">3</div>
+                            <div>
+                                <h4>绿色环保</h4>
+                                <p style="font-size: 12px; margin:0;">无甲醛更安心</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">4</div>
+                            <div>
+                                <h4>无忧售后</h4>
+                                <p style="font-size: 12px; margin:0;">终身质保服务</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/factory/600/400" alt="德丝缇拉克工厂车间">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 定制服务 -->
+    <section id="service" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>专业定制服务</h2>
+                <p>无论是窗户尺寸还是特殊面料需求，我们都能满足</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card" style="text-align: center; padding: 30px;">
+                    <div style="font-size: 40px; margin-bottom: 15px;">📏</div>
+                    <h3>尺寸测量</h3>
+                    <p>专业设计师上门测量，确保尺寸精准。</p>
+                </div>
+                <div class="category-card" style="text-align: center; padding: 30px;">
+                    <div style="font-size: 40px; margin-bottom: 15px;">🎨</div>
+                    <h3>色彩搭配</h3>
+                    <p>提供免费配色建议，打造和谐家居风格。</p>
+                </div>
+                <div class="category-card" style="text-align: center; padding: 30px;">
+                    <div style="font-size: 40px; margin-bottom: 15px;">🚚</div>
+                    <h3>上门安装</h3>
+                    <p>专业团队安装调试，省心省力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>德丝缇拉克 DESITILA</h4>
+                    <p style="font-size: 14px; line-height: 1.8;">专注高端家居布艺，让生活更有质感。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">新品上市</a></li>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>产品中心</h4>
+                    <ul>
+                        <li><a href="#">窗帘定制</a></li>
+                        <li><a href="#">沙发套</a></li>
+                        <li><a href="#">靠垫抱枕</a></li>
+                        <li><a href="#">床品四件套</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：service@desitila.com</li>
+                        <li>地址：上海市家居建材城A座</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 德丝缇拉克家居 版权所有 | 京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
