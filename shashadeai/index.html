@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>傻傻的爱傻傻等待 - 深情时光纪念馆</title>
+    <meta name="description" content="傻傻的爱傻傻等待 - 一个专注于情感记录、时光胶囊与等待意义探讨的心灵栖息地。分享关于单恋、异地恋、守候与真爱的故事，记录那些笨拙却真挚的情感瞬间。">
+    <meta name="keywords" content="傻傻的爱傻傻等待,情感故事,单恋,异地恋,守候,时光胶囊,情感记录">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d4a373;
+            --secondary-color: #faedcd;
+            --accent-color: #ccd5ae;
+            --text-main: #2b2d42;
+            --text-light: #8d99ae;
+            --bg-body: #fefae0;
+            --bg-card: #ffffff;
+            --spacing-unit: 1rem;
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(254, 250, 224, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 163, 115, 0.4);
+            background-color: #c08555;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Decorative Elements */
+        .circle-bg {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            opacity: 0.6;
+            z-index: 1;
+        }
+
+        .circle-1 { width: 300px; height: 300px; top: -50px; left: -50px; }
+        .circle-2 { width: 200px; height: 200px; bottom: 50px; right: 10%; }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Stories Grid */
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .story-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .story-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+        }
+
+        .card-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid #f0f0f0;
+            padding-top: 1rem;
+        }
+
+        /* Philosophy Section */
+        .philosophy-section {
+            background-color: #fff;
+            padding: 4rem 0;
+            border-radius: var(--radius-lg);
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .philosophy-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .philosophy-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .philosophy-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .philosophy-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .philosophy-visual {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-color: var(--secondary-color);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .clock-icon {
+            font-size: 8rem;
+            color: var(--primary-color);
+            opacity: 0.8;
+        }
+
+        /* Interactive Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: var(--secondary-color);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 2rem;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 2rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            border: 4px solid #fff;
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 0 2px var(--secondary-color);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-main);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 10px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">傻傻的<span>爱傻傻等待</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#stories">情感故事</a></li>
+                    <li><a href="#philosophy">守候的意义</a></li>
+                    <li><a href="#timeline">时光记录</a></li>
+                    <li><a href="#guide">等待指南</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="circle-bg circle-1"></div>
+            <div class="circle-bg circle-2"></div>
+            <div class="hero-content">
+                <h1>傻傻的爱，<br>傻傻地等待</h1>
+                <p>在这个速食的时代，我们依然相信笨拙的深情。记录那些不为人知的守候，探讨爱情里最纯粹的坚持。</p>
+                <div class="hero-btns">
+                    <a href="#stories" class="btn">阅读故事</a>
+                    <a href="#guide" class="btn btn-outline">如何正确等待</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stories Section -->
+        <section id="stories" class="container">
+            <div class="section-header">
+                <h2>情感故事集</h2>
+                <p>那些关于坚持、隐忍与最终释怀的故事，或许能触动你的心弦。</p>
+            </div>
+            <div class="stories-grid">
+                <article class="story-card">
+                    <div class="card-image">
+                        <span class="card-badge">单恋</span>
+                        <img src="https://picsum.photos/seed/love1/400/300" alt="图书馆的守候">
+                    </div>
+                    <div class="card-content">
+                        <h3>图书馆的第四排</h3>
+                        <p>为了那个总是坐在第四排看书的背影，我坚持了整整两年。直到毕业那天，我终于鼓起勇气递出了一封从未寄出的信，换来了一个礼貌的微笑和一句“谢谢”。</p>
+                        <div class="card-footer">
+                            <span>2023-10-15</span>
+                            <a href="#">阅读更多 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="story-card">
+                    <div class="card-image">
+                        <span class="card-badge">异地恋</span>
+                        <img src="https://picsum.photos/seed/love2/400/300" alt="跨城的列车">
+                    </div>
+                    <div class="card-content">
+                        <h3>三千公里的候车室</h3>
+                        <p>我们的爱情跨越了三个省份。所有的周末都在高铁站度过，看着车票上的时间从早等到晚。这种“傻傻的等待”虽然疲惫，却让我们更加珍惜每一次见面。</p>
+                        <div class="card-footer">
+                            <span>2023-11-02</span>
+                            <a href="#">阅读更多 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="story-card">
+                    <div class="card-image">
+                        <span class="card-badge">遗憾</span>
+                        <img src="https://picsum.photos/seed/love3/400/300" alt="未发送的消息">
+                    </div>
+                    <div class="card-content">
+                        <h3>草稿箱里的五封信</h3>
+                        <p>因为害怕打扰，因为不够自信，我写了五封信，删了五次。等到我终于决定发送的那一刻，对方已经牵起了别人的手。原来最傻的等待，是连开始都不敢。</p>
+                        <div class="card-footer">
+                            <span>2023-11-20</span>
+                            <a href="#">阅读更多 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="container">
+            <div class="philosophy-section">
+                <div class="container philosophy-container">
+                    <div class="philosophy-text">
+                        <h2>守候，是爱的另一种表达</h2>
+                        <p>人们常说“傻傻的爱傻傻等待”，这听起来似乎有些消极，甚至有些卑微。但细细想来，这种“傻”里藏着的是最纯粹的心意。</p>
+                        <p>在快节奏的社交网络时代，人们习惯了“快餐式”的恋爱，习惯了随时的断联和备选。而那些愿意花时间等待的人，往往是因为他们看重的是“确定性”和“长久”。他们愿意在对方不确定的时候，做那个坚定的选择。</p>
+                        <p>这种等待不一定是卑微的乞求，也可以是一种对自我情感的尊重。它代表着：我愿意把最好的自己留给你，哪怕结果未知。</p>
+                    </div>
+                    <div class="philosophy-visual">
+                        <div class="clock-icon">⏳</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="container">
+            <div class="section-header">
+                <h2>时光胶囊：等待的旅程</h2>
+                <p>记录那些在等待中成长的瞬间，每一步都算数。</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021年</span>
+                        <h3>故事的开始</h3>
+                        <p>在一次偶然的活动中，你注意到了那个眼神。那一刻，心里种下了一颗名为“等待”的种子。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022年</span>
+                        <h3>漫长的拉锯</h3>
+                        <p>你开始默默关注他的动态，学会了在他难过时送上安慰，却始终不敢迈出那一步。等待变得漫长而煎熬。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023年</span>
+                        <h3>自我的觉醒</h3>
+                        <p>在无数个夜晚的思考后，你明白等待不应该消耗你的价值。你开始专注于提升自己，变得更好，只为在相遇时，能自信地站在他身边。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">未来</span>
+                        <h3>未知的结局</h3>
+                        <p>无论结局是喜是悲，这段经历都将成为你生命中独特的风景。你感谢那个曾经傻傻等待的自己。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="container">
+            <div class="section-header">
+                <h2>等待指南：如何让等待更有价值？</h2>
+                <p>不是所有的等待都有意义。学会管理你的情绪，才能在爱情中保持独立与清醒。</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="background: white; padding: 2rem; border-radius: var(--radius-md); border-left: 4px solid var(--primary-color); box-shadow: var(--shadow-sm);">
+                    <h3 style="margin-bottom: 1rem;">1. 建立自我边界</h3>
+                    <p style="color: var(--text-light);">等待不等于失去自我。保持你的社交圈、工作和兴趣爱好，不要让等待成为你生活的全部。</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: var(--radius-md); border-left: 4px solid var(--secondary-color); box-shadow: var(--shadow-sm);">
+                    <h3 style="margin-bottom: 1rem;">2. 沟通代替猜测</h3>
+                    <p style="color: var(--text-light);">如果不确定对方的态度，尝试坦诚地交流。很多“傻傻的等待”其实源于误会和缺乏沟通。</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: var(--radius-md); border-left: 4px solid var(--accent-color); box-shadow: var(--shadow-sm);">
+                    <h3 style="margin-bottom: 1rem;">3. 设定止损点</h3>
+                    <p style="color: var(--text-light);">爱需要勇气，也需要理智。给自己设定一个期限或底线。如果对方始终没有回应，学会放手也是一种勇敢。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>傻傻的爱傻傻等待</h4>
+                    <p style="color: #999; font-size: 0.9rem; line-height: 1.6;">
+                        致每一个在爱情中坚持、隐忍、或者迷茫的人。这里没有标准答案，只有真诚的陪伴。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>栏目导航</h4>
+                    <ul>
+                        <li><a href="#">情感故事</a></li>
+                        <li><a href="#">守候的意义</a></li>
+                        <li><a href="#">时光记录</a></li>
+                        <li><a href="#">等待指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">联系投稿</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">加入社区</a></li>
+                        <li><a href="#">友情链接</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 傻傻的爱傻傻等待 - 深情时光纪念馆. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+                              </html>
