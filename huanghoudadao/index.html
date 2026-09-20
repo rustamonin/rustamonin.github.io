@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="皇后大道东罗大佑 - 经典粤语流行音乐百科与深度赏析。收录歌曲背景故事、歌词解读、专辑介绍及乐评文章，探索罗大佑音乐中的社会关怀与人文精神。">
+    <meta name="keywords" content="皇后大道东罗大佑, 罗大佑, 经典粤语老歌, 音乐赏析, 歌词解读, 港乐">
+    <title>皇后大道东罗大佑 - 经典港乐深度赏析与歌词解读</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #c0392b;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-main);
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+            background-color: rgba(192, 57, 43, 0.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/lofu/1600/600') no-repeat center center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            font-weight: 500;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        /* Content Grid */
+        .main-content {
+            padding: 40px 0;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Article List */
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .article-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .article-excerpt {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .read-more:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .song-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .song-list li:last-child {
+            border-bottom: none;
+        }
+
+        .song-list a {
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .song-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .song-tag {
+            font-size: 0.75rem;
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #666;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: var(--secondary-color);
+            color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            font-style: italic;
+        }
+
+        .quote-box p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .quote-box cite {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #bdc3c7;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <span>♪</span> 皇后大道东罗大佑
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">歌曲赏析</a></li>
+                <li><a href="#">歌词解读</a></li>
+                <li><a href="#">罗大佑生平</a></li>
+                <li><a href="#">专辑目录</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>皇后大道东罗大佑</h1>
+        <p>一首跨越时代的香港史诗，在历史的洪流中记录时代的变迁与民生的百态。</p>
+        <a href="#analysis" class="btn">阅读深度赏析</a>
+    </section>
+
+    <div class="main-content">
+        <!-- Left Content -->
+        <div class="content-area">
+            
+            <!-- Introduction Section -->
+            <section id="intro">
+                <div class="section-title">作品背景</div>
+                <article class="article-card" style="flex-direction: row;">
+                    <img src="https://picsum.photos/seed/lofu2/400/300" alt="罗大佑照片" class="article-image" style="width: 300px; height: auto; flex-shrink: 0;">
+                    <div class="article-body">
+                        <h2 class="article-title">《皇后大道东》：香港回归前的政治寓言</h2>
+                        <div class="article-meta">
+                            <span>发布于 2023-10-27</span>
+                            <span>分类：音乐赏析</span>
+                        </div>
+                        <p class="article-excerpt">
+                            《皇后大道东》收录于罗大佑1991年发行的专辑《原乡》中。这首歌由林夕填词，罗大佑作曲并演唱。作为一首经典的粤语流行曲，它表面上在描绘香港的街道与风景，实则隐喻了90年代初香港回归前夕的社会氛围、政治局势以及普通市民的复杂心态。歌曲中“有谁又会忘记”的追问，至今仍发人深省。
+                        </p>
+                        <a href="#" class="read-more">阅读全文</a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Analysis Section -->
+            <section id="analysis">
+                <div class="section-title">深度解读</div>
+                <div class="article-list">
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/lofu3/800/400" alt="香港街道" class="article-image">
+                        <div class="article-body">
+                            <h3 class="article-title"><a href="#">从“有谁又会忘记”看历史记忆的建构</a></h3>
+                            <div class="article-meta">
+                                <span>作者：音乐观察员</span>
+                            </div>
+                            <p class="article-excerpt">
+                                歌词开篇“有谁又会忘记皇后大道东，从无到有，有谁又会否忘记”，不仅仅是简单的陈述，更是一种对历史进程的审视。罗大佑用平实的语言构建了一个宏大的叙事框架，将个人的命运融入城市的变迁之中。这种“去个人化”的宏大视角，是罗大佑一贯的创作手法。
+                            </p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/lofu4/800/400" alt="历史变迁" class="article-image">
+                        <div class="article-body">
+                            <h3 class="article-title"><a href="#">“有份去开两间酒吧”与中产阶级的焦虑</a></h3>
+                            <div class="article-meta">
+                                <span>作者：文化评论</span>
+                            </div>
+                            <p class="article-excerpt">
+                                “有份去开两间酒吧，有份做点小生意，所有的钱要以黄金来讲”。这段歌词精准地捕捉了当时香港中产阶级在政治变动前夕的迷茫与务实。他们关心的是资产保值、是“黄金”的兑换，而非宏大的政治口号。这种现实主义的笔触，使得《皇后大道东》具有了超越时代的现实意义。
+                            </p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/lofu5/800/400" alt="香港政治" class="article-image">
+                        <div class="article-body">
+                            <h3 class="article-title"><a href="#">“只知大叫英文Great”的文化身份认同</a></h3>
+                            <div class="article-meta">
+                                <span>作者：乐评人</span>
+                            </div>
+                            <p class="article-excerpt">
+                                歌曲中“只知大叫英文Great”的讽刺意味，直指当时部分社会现象。这种对于文化身份认同的困惑，以及在社会巨变中随波逐流的心态，通过罗大佑略带戏谑的唱腔表达出来，既无奈又充满力量。
+                            </p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar">
+            <div class="quote-box">
+                <p>“只有声音，没有面孔。”</p>
+                <cite>—— 罗大佑创作理念</cite>
+            </div>
+
+            <div class="sidebar-widget">
+                <h4 class="widget-title">经典曲目推荐</h4>
+                <ul class="song-list">
+                    <li>
+                        <a href="#">皇后大道东</a>
+                        <span class="song-tag">必听</span>
+                    </li>
+                    <li>
+                        <a href="#">东方之珠</a>
+                        <span class="song-tag">爱国</span>
+                    </li>
+                    <li>
+                        <a href="#">恋曲1990</a>
+                        <span class="song-tag">经典</span>
+                    </li>
+                    <li>
+                        <a href="#">光阴的故事</a>
+                        <span class="song-tag">怀旧</span>
+                    </li>
+                    <li>
+                        <a href="#">未来的主人翁</a>
+                        <span class="song-tag">社会</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h4 class="widget-title">相关专辑</h4>
+                <ul class="song-list">
+                    <li><a href="#">《之乎者也》</a></li>
+                    <li><a href="#">《未来的主人翁》</a></li>
+                    <li><a href="#">《爱人同志》</a></li>
+                    <li><a href="#">《原乡》</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <p>致力于收录与罗大佑相关的经典音乐资料、歌词解析及乐评文章，为华语流行音乐爱好者提供纯净的欣赏空间。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">歌曲列表</a></li>
+                    <li><a href="#">歌词下载</a></li>
+                    <li><a href="#">乐迷论坛</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系与合作</h4>
+                <ul>
+                    <li><a href="#">投稿建议</a></li>
+                    <li><a href="#">版权声明</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 皇后大道东罗大佑专题站. All Rights Reserved. 本站内容仅供学习交流使用.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
