@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="门弟电视连续剧全集在线观看平台，提供高清全集资源、剧情简介、角色介绍及观看指南，满足用户一站式搜索需求。">
+    <meta name="keywords" content="门弟电视连续剧全集,门弟电视剧,在线观看,全集资源">
+    <title>门弟电视连续剧全集-高清剧情解析与在线观看指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e50914; /* 娱乐/影视类常用深红 */
+            --primary-hover: #b20710;
+            --bg-color: #141414;
+            --card-bg: #1f1f1f;
+            --text-main: #ffffff;
+            --text-secondary: #b3b3b3;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+            padding: 15px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            font-size: 14px;
+        }
+
+        .search-box {
+            display: flex;
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            border: none;
+            padding: 8px 12px;
+            background: transparent;
+            color: white;
+            outline: none;
+            width: 200px;
+        }
+
+        .search-box button {
+            border: none;
+            background: var(--primary-color);
+            color: white;
+            padding: 0 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.9) 100%), url('https://picsum.photos/seed/tvshowhero/1200/400') no-repeat center center/cover;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 40px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .hero-meta {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-desc {
+            color: #ddd;
+            margin-bottom: 25px;
+            max-width: 600px;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--text-main);
+            color: var(--text-main);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* 通用区块样式 */
+        section {
+            padding: 40px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* 更新列表 */
+        .episode-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .episode-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .episode-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .card-thumb {
+            height: 120px;
+            background-color: #333;
+            position: relative;
+        }
+        
+        .card-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 2px;
+        }
+
+        .card-info {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* 剧情介绍 */
+        .intro-content {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .intro-text {
+            color: #ccc;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 角色介绍 */
+        .cast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .cast-card {
+            text-align: center;
+        }
+
+        .cast-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 10px;
+            border: 2px solid #333;
+        }
+
+        .cast-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cast-name {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .cast-role {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #000;
+            padding: 40px 0;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .nav-links {
+                display: none; /* 简化移动端展示 */
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .episode-list {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">门弟影视</a>
+            <nav class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">电视剧</a>
+                <a href="#">电影</a>
+                <a href="#">综艺</a>
+                <a href="#">排行榜</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索门弟...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 区域：核心内容展示 -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">门弟电视连续剧全集</h1>
+                    <div class="hero-meta">
+                        <span>类型：家庭/伦理/剧情</span>
+                        <span>年份：2023</span>
+                        <span>状态：全集完结</span>
+                    </div>
+                    <p class="hero-desc">本站提供门弟电视连续剧全集高清在线观看资源。深入解析剧中复杂的人物关系与情感纠葛，为您呈现最完整的观看体验。</p>
+                    <div class="hero-actions">
+                        <a href="#episodes" class="btn btn-primary">立即观看全集</a>
+                        <a href="#intro" class="btn btn-outline">查看剧情简介</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 剧情简介 -->
+        <section class="container" id="intro">
+            <div class="section-header">
+                <h2 class="section-title">剧情简介</h2>
+            </div>
+            <div class="intro-content">
+                <p class="intro-text">
+                    《门弟》是一部聚焦于现代都市家庭伦理与个人成长的电视剧。故事围绕主角林门弟在家族企业危机与个人情感抉择之间的挣扎展开。剧集细腻地刻画了在传统观念与现代价值观碰撞下，新一代年轻人的生存状态。
+                </p>
+                <p class="intro-text">
+                    该剧不仅展现了商战的波谲云诡，更深刻探讨了亲情、责任与爱的真谛。通过一系列跌宕起伏的剧情，引导观众思考如何在复杂的社会关系中坚守本心，寻找属于自己的“门第”与归属感。
+                </p>
+            </div>
+        </section>
+
+        <!-- 全集列表 -->
+        <section class="container" id="episodes">
+            <div class="section-header">
+                <h2 class="section-title">全集列表</h2>
+                <div class="filter-tags">
+                    <a href="#" style="color:var(--primary-color)">全部</a>
+                    <a href="#" style="color:var(--text-secondary)">高清</a>
+                    <a href="#" style="color:var(--text-secondary)">国语</a>
+                </div>
+            </div>
+            
+            <div class="episode-list">
+                <!-- 单集卡片 1 -->
+                <article class="episode-card">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/ep1/300/200" alt="第1集封面">
+                        <span class="card-badge">更新</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">第1集：初入职场</h3>
+                        <div class="card-meta">2023-10-01 | 45分钟</div>
+                    </div>
+                </article>
+
+                <!-- 单集卡片 2 -->
+                <article class="episode-card">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/ep2/300/200" alt="第2集封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">第2集：家族聚会</h3>
+                        <div class="card-meta">2023-10-02 | 45分钟</div>
+                    </div>
+                </article>
+
+                <!-- 单集卡片 3 -->
+                <article class="episode-card">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/ep3/300/200" alt="第3集封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">第3集：意外的危机</h3>
+                        <div class="card-meta">2023-10-03 | 45分钟</div>
+                    </div>
+                </article>
+
+                <!-- 单集卡片 4 -->
+                <article class="episode-card">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/ep4/300/200" alt="第4集封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">第4集：抉择时刻</h3>
+                        <div class="card-meta">2023-10-04 | 45分钟</div>
+                    </div>
+                </article>
+
+                <!-- 单集卡片 5 -->
+                <article class="episode-card">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/ep5/300/200" alt="第5集封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">第5集：真相大白</h3>
+                        <div class="card-meta">2023-10-05 | 45分钟</div>
+                    </div>
+                </article>
+
+                <!-- 单集卡片 6 -->
+                <article class="episode-card">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/ep6/300/200" alt="第6集封面">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">第6集：新的开始</h3>
+                        <div class="card-meta">2023-10-06 | 45分钟</div>
+                    </div>
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#" class="btn btn-outline" style="border-color: var(--text-secondary); color: var(--text-secondary);">加载更多集数</a>
+            </div>
+        </section>
+
+        <!-- 角色介绍 -->
+        <section class="container" id="cast">
+            <div class="section-header">
+                <h2 class="section-title">主要角色</h2>
+            </div>
+            <div class="cast-grid">
+                <div class="cast-card">
+                    <div class="cast-avatar">
+                        <img src="https://picsum.photos/seed/actor1/200/200" alt="林门弟">
+                    </div>
+                    <div class="cast-name">林门弟</div>
+                    <div class="cast-role">男主角</div>
+                </div>
+                <div class="cast-card">
+                    <div class="cast-avatar">
+                        <img src="https://picsum.photos/seed/actor2/200/200" alt="苏婉">
+                    </div>
+                    <div class="cast-name">苏婉</div>
+                    <div class="cast-role">女主角</div>
+                </div>
+                <div class="cast-card">
+                    <div class="cast-avatar">
+                        <img src="https://picsum.photos/seed/actor3/200/200" alt="林父">
+                    </div>
+                    <div class="cast-name">林建国</div>
+                    <div class="cast-role">林家父亲</div>
+                </div>
+                <div class="cast-card">
+                    <div class="cast-avatar">
+                        <img src="https://picsum.photos/seed/actor4/200/200" alt="陈叔">
+                    </div>
+                    <div class="cast-name">陈叔</div>
+                    <div class="cast-role">家族管家</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 门弟影视在线观看平台. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 12px; color: #666;">
+                本站内容仅供学习交流使用，版权归原作者所有。如需观看正版，请支持官方渠道。
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
